@@ -2,21 +2,21 @@
 
   "use strict";
 
-  const tabs = document.querySelectorAll('[data-tab-target]')
-  const tabContents = document.querySelectorAll('[data-tab-content]')
+  const tabs = document.querySelectorAll('[data-tab-target]');
+  const tabContents = document.querySelectorAll('[data-tab-content]');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const target = document.querySelector(tab.dataset.tabTarget)
+      const target = document.querySelector(tab.dataset.tabTarget);
       tabContents.forEach(tabContent => {
-        tabContent.classList.remove('active')
-      })
+        tabContent.classList.remove('active');
+      });
       tabs.forEach(tab => {
-        tab.classList.remove('active')
-      })
-      tab.classList.add('active')
-      target.classList.add('active')
-    })
+        tab.classList.remove('active');
+      });
+      tab.classList.add('active');
+      target.classList.add('active');
+    });
   });
 
   // Responsive Navigation with Button
@@ -57,8 +57,8 @@
 
     Chocolat(document.querySelectorAll('.image-link'), {
         imageSize: 'contain',
-        loop: true,
-    })
+        loop: true
+    });
 
 
     $('#header-wrap').on('click', '.search-toggle', function(e) {
@@ -85,7 +85,7 @@
         fade: true,
         dots: true,
         prevArrow: $('.prev'),
-        nextArrow: $('.next'),
+        nextArrow: $('.next')
     }); 
 
     $('.product-grid').slick({
@@ -125,12 +125,12 @@
 
     AOS.init({
       duration: 1200,
-      once: true,
-    })
+      once: true
+    });
 
     jQuery('.stellarnav').stellarNav({
       theme: 'plain',
-      closingDelay: 250,
+      closingDelay: 250
       // mobileMode: false,
     });
 
